@@ -1,0 +1,42 @@
+/// Model (or Mermaid) specification modifier.
+///
+/// Used to modify code and document generation.
+module common.mspec {
+
+/// Replaces a Local decl with another decl in class diagrams.
+type RepresentedBy = String;
+
+/// Used by `type` and `newtype` to denote an inheritance relationship
+type Embedded = Void;
+
+/// Used on reference fields, effectively makes the references decl a "super" type
+type Embed = Void;
+
+type Hidden = Void;
+
+type HideRealization = Void;
+
+type UnwrapTypeParam = Void;
+
+type ArrowIdx = Int32;
+
+type Note = String;
+
+struct DiagramOptions {
+    Direction direction = "LR";
+};
+
+union Direction {
+    /// Top to bottom
+    Void TB;
+    /// Top-down/ same as top to bottom
+    Void TD;
+    /// Bottom to top
+    Void BT;
+    /// Right to left
+    Void RL;
+    /// Left to right
+    Void LR;
+};
+
+};

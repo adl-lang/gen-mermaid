@@ -1,0 +1,34 @@
+module example {
+
+import common.mspec.HideRealization;
+import common.mspec.Hidden;
+
+struct A {
+    Vector<B> bs;
+};
+
+struct B {
+    String c;
+};
+
+union C {
+    D d1;
+    D d2;
+    D d3;
+    E e1;
+};
+
+struct D {
+};
+
+struct E {
+};
+
+annotation C::d1 HideRealization null;
+annotation C::d2 HideRealization null;
+annotation C::d3 HideRealization null;
+annotation C::e1 HideRealization null;
+
+annotation D Hidden null;
+
+};
